@@ -1,6 +1,6 @@
 [wiki homepage, hoop ik] (https://github.com/bartfennema/bartfennema.github.io/wiki)
 
-#### Test 2 (H4?)
+### Test 2 (H3?)
 [Wat ik moet onthouden] (https://bartfennema.github.io/remember) 
 
 
