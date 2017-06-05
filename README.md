@@ -1,5 +1,8 @@
 [wiki homepage, hoop ik] (https://github.com/bartfennema/bartfennema.github.io/wiki)
 
+#### Test 2 (H4?)
+[Wat ik moet onthouden] (https://bartfennema.github.io/remember) 
+
 
 ## Welcome to GitHub Pages
 
