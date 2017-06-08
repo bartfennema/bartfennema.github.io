@@ -1,7 +1,7 @@
 [wiki homepage, hoop ik](https://github.com/bartfennema/bartfennema.github.io/wiki)
 
 ### Test 2 (H3?)
-[Wat ik moet onthouden](https://bartfennema.github.io/remember.html)  
+[Wat ik moet onthouden](https://bartfennema.github.io/remember.md)  
 
 ## Welcome to GitHub Pages
 
