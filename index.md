@@ -8,5 +8,4 @@ Springplank:
 
 [Wat zijn github pages](https://bartfennema.github.io/info.html)
 
-
-[Mijn posts](https://bartfennema.github.io/posts)
+[Mijn posts](https://bartfennema.github.io/bloglist.html)
