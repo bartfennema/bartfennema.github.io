@@ -6,6 +6,7 @@ Springplank:
 
 [Wat ik moet onthouden](https://bartfennema.github.io/remember.html) 
 
-[Wat zijn github pages](https://bartfennema.github.io/readme.html)
+[Wat zijn github pages](https://bartfennema.github.io/info.html)
 
 
+[Mijn posts](https://bartfennema.github.io/posts)
