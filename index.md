@@ -11,3 +11,8 @@ Springplank:
 [Mijn posts](https://bartfennema.github.io/bloglist.html)
 
 [Mijn TiddlyWiki](https://bartfennema.github.io/TiddlyWiki.html)
+
+nieuwe regel toegevoegd.
+
+Dit ga ik straks committen
+
