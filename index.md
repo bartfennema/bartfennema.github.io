@@ -12,7 +12,5 @@ Springplank:
 
 [Mijn TiddlyWiki](https://bartfennema.github.io/TiddlyWiki.html)
 
-nieuwe regel toegevoegd.
-
-Dit ga ik straks committen
+[Mijn repository 'Functionaris Gegevensbescherming'](https://github.com/bartfennema/Functionaris-Gegevensbescherming)
 
