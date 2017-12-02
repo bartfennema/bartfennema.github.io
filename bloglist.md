@@ -6,6 +6,7 @@
 
 - **December**
 [20171201](https://bartfennema.github.io/posts/20171201.html)
+[20171202](https://bartfennema.github.io/posts/20171202.html)
 
 
 
