@@ -14,3 +14,5 @@ Springplank:
 
 [Mijn repository 'Functionaris Gegevensbescherming'](https://github.com/bartfennema/Functionaris-Gegevensbescherming)
 
+[Stuff about yoga](https://bartfennema.github.io/yoga/)
+
