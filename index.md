@@ -1,18 +1,16 @@
-Welkom op mijn website!
+**Welkom op mijn website!**
 
-Check hier die mooie layout dan!
-
-Springplank:
-
-[Wat ik moet onthouden](https://bartfennema.github.io/remember.html) 
+[Geek stuff](https://bartfennema.github.io/remember.html) 
 
 [Wat zijn github pages](https://bartfennema.github.io/info.html)
 
-[Mijn posts](https://bartfennema.github.io/bloglist.html)
+[Persoonlijk](https://bartfennema.github.io/bloglist.html)
+
+[Werk](https://bartfennema.github.io/werk.html)
 
 [Mijn TiddlyWiki](https://bartfennema.github.io/TiddlyWiki.html)
 
-[Mijn repository 'Functionaris Gegevensbescherming'](https://github.com/bartfennema/Functionaris-Gegevensbescherming)
+[Prive: 'Functionaris Gegevensbescherming'](https://github.com/bartfennema/Functionaris-Gegevensbescherming)
 
-[Stuff about yoga](https://bartfennema.github.io/yoga/index.html)
+[Yoga](https://bartfennema.github.io/yoga/index.html)
 

@@ -2,8 +2,7 @@
 2. [dynalist.io](https://dynalist.io)
 3. [http://tesseractmoments.surge.sh/](http://tesseractmoments.surge.sh/)
 4. [http://giffmex.org/ Notetaking tools](http://giffmex.org/experiments/daves.tech.dumpster.static.html#Notetaking%20tools)
-5. [Themes](https://github.com/TryGhost/Casper/blob/master/README.md)
+5. [themes](https://github.com/TryGhost/Casper/blob/master/README.md)
 6. [weblog Joanna Rutkowska, developer Qubes-OS](https://blog.invisiblethings.org/index.html)
-
-
-[wiki homepage, hoop ik](https://github.com/bartfennema/bartfennema.github.io/wiki)
+7. [wat zijn github pages](https://bartfennema.github.io/info.html)
+8. [wiki homepage, hoop ik](https://github.com/bartfennema/bartfennema.github.io/wiki)
