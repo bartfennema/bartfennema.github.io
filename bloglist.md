@@ -1,6 +1,14 @@
 [Back to homepage](https://bartfennema.github.io/)
 
+**2018**
+
+**January**
+- [04  Ty Landrum](https://bartfennema.github.io/posts/20180104.html)
+
 **2017**
+
+**December**
+- [30  Doelen 2018](https://bartfennema.github.io/posts/20171230.html)
 
 **December**
 - [30  Doelen 2018](https://bartfennema.github.io/posts/20171230.html)
