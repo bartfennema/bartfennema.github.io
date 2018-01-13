@@ -1,14 +1,10 @@
 **Welkom op mijn website!**
 
-[Geek stuff](https://bartfennema.github.io/remember.html) 
-
-[Wat zijn github pages](https://bartfennema.github.io/info.html)
-
 [Persoonlijk](https://bartfennema.github.io/bloglist.html)
 
-[Werk](https://bartfennema.github.io/werk.html)
+[Werk](https://bartfennema.github.io/werk/index.html)
 
-[Mijn TiddlyWiki](https://bartfennema.github.io/TiddlyWiki.html)
+[Geek stuff](https://bartfennema.github.io/remember.html) 
 
 [Prive: 'Functionaris Gegevensbescherming'](https://github.com/bartfennema/Functionaris-Gegevensbescherming)
 
