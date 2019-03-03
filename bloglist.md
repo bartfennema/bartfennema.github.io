@@ -1,5 +1,9 @@
 [Back to homepage](https://bartfennema.github.io/)
 
+|**2019**      |          |
+|**Maart**     |          |
+|03            |[The Power of vulnerability](https://bartfennema.github.io/posts/20190303.html)|
+|              |          |
 |**2018**      |          |
 |**January**   |          |
 |10            |[Sheperds Pie recept](https://bartfennema.github.io/posts/20180110.html)|
