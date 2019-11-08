@@ -1,0 +1,27 @@
+Hierbij de CAB agenda voor dinsdag 05 november
+ 
+Vrijgave ontwikkeling:
+W19 09 00266 Nieuwe versie PowerBI gateway beschikbaar. Functie PowerBI: "De Power BI Gateway regelt de datastroom tussen on-prem datawarehuis en de Microsoft cloud-dienst zodat onze dashboards beschikbaar kunnen worden gesteld aan de organisatie." BFOK
+    
+W19 10 01208 Webapp Natuurlijk Zuid-Holland. Intern: als medewerker van de PZH, betrokken bij de de visie en uitvoeringsagenda Rijke en Groenblauwe Leefomgeving, wil ik meer datagedreven en doelgericht samenwerken zodat ik: beslissingen kan baseren op data, projecten kan vergelijken en relevante samenwerkingspartners kan benaderen.
+Extern: als inwoner van de PZH wil ik inzicht in de projecten die (bij mij in de buurt) bijdragen aan een gezonde en aantrekkelijke leefomgeving zodat ik mijn bijdrage kan leveren aan een gezonde en aantrekkelijke leefomgeving of de provincie kan aanspreken op het niet nakomen van haar ambitie
+
+Webapp Natuurlijk Zuid-Holland. Is dit bij architectuurschouw aan de orde geweest?
+Het lijkt goed om hier een architectuur uitwerking van te maken. Afspreken met Jacob of hij dit gaat doen, of wie dan?
+Check de link met het samenwerkingsplatform: wat voor vorm zou dat moeten hebben en welke functionaliteit is daarvoor gewenst/beschikbaar.
+
+ 
+Vrijgave produktie:
+-
+ 
+Evaluatie:
+W17 12 00092 implementatie vDWH BFOK Nog wel een vraag: Op basis van welke criteria evalueren we deze change?
+ 
+Overig:
+Changekalender
+ 
+Categorie 1 wijzigingen (ter informatie):
+W19 10 00672 Zevende portefeuillehouder in besluitenworkflow (ontwikkeling) BFOK
+W19 10 01136 Snel opstarten Windows 10 uitschakelen (produktie) BFOK
+W19 11 00008 Extra kolom in SMD-overzicht (produktie) BFOK
+
