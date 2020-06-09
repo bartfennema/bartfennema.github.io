@@ -1,4 +1,5 @@
-**Welkom op mijn website!!** nwe tag
+**Welkom op mijn website!!** 
+Nu voorzien van digitaal ondertekende commits en tags
 
 [Persoonlijk](https://bartfennema.github.io/bloglist.html)
 
