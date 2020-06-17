@@ -1,3 +1,6 @@
-theme: jekyll-theme-time-machine
-title: Bart Fennema
-description: Weblog over werk en prive.
+# Site settings
+title: Mieterse boel
+url: "https://bartfennema.github.io."
+
+# Build settings
+markdown: kramdown
