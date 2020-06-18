@@ -7,16 +7,20 @@ permalink: /keys/
 I use [GnuPG](https://gnupg.org/) for email encryption and signing. I also use
 it to sign various other things, such as documents, code, and this blog.
 
-## The Master Key... I  have none
+## The Master Key..
 
 All my keys are signed by the following Master Signing Key:
-...
-...
-...
+
+pub   dsa1024 2006-05-23 [SCA]
+      E1C181834E797F92FE8F69C1A094788ECE0C9C0E
+uid           [ultimate] Bart Fennema <bfennema@gmail.com>
+sub   elg4096 2006-05-23 [E]
+sub   rsa4096 2020-06-18 [S]
 
 This key is also attached to this repo in the [key/](/keys/) directory. You
 should verify the fingerprint of this master key using some other channel than
 just this blog.
+I use this key for signing my blogposts as well.
 
 * This key is attached here: [keys/bfennema.asc](/keys/bfennema.asc).
 
@@ -29,13 +33,6 @@ pub   rsa2048 2015-05-11 [SC]
 uid           [ultimate] bartf1969@protonmail.com <bartf1969@protonmail.com>
 
 * This key is attached here: [keys/bartf1969protonmail.asc](/keys/bartf1969protonmail.asc).
-
-## Blog signing key...I will make one soon
-
-The following key is used to sign this blog repo:
-
-
-* This key will be attached here: [keys/bartblog.asc](/keys/bartblog.asc).
 
 
 ## Note on lack of expiration date on code-signing keys
@@ -66,6 +63,6 @@ somebody was able to execute malicious code in the VM where a private key
 lives, then the key should be considered compromised no matter how complex
 passphrase I used to protect it.  Passphrases on private keys are classic
 example of [Security Theater](http://en.wikipedia.org/wiki/Security_theater) in
-my opinion.  O.o ... huh! ... That's why I like Joanna's opinion on security; she thinks!
+my opinion.  O.o ... huh! ... I like Joanna's opinion on security;
 
 
