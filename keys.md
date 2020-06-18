@@ -11,11 +11,11 @@ it to sign various other things, such as documents, code, and this blog.
 
 All my keys are signed by the following Master Signing Key:
 
-pub   dsa1024 2006-05-23 [SCA]
-      E1C181834E797F92FE8F69C1A094788ECE0C9C0E
-uid           [ultimate] Bart Fennema <bfennema@gmail.com>
-sub   elg4096 2006-05-23 [E]
-sub   rsa4096 2020-06-18 [S]
+    pub   dsa1024 2006-05-23 [SCA]
+          E1C181834E797F92FE8F69C1A094788ECE0C9C0E
+    uid           [ultimate] Bart Fennema <bfennema@gmail.com>
+    sub   elg4096 2006-05-23 [E]
+    sub   rsa4096 2020-06-18 [S]
 
 This key is also attached to this repo in the [key/](/keys/) directory. You
 should verify the fingerprint of this master key using some other channel than
@@ -28,9 +28,9 @@ I use this key for signing my blogposts as well.
 
 The following is my GPG key for Protonmail:
 
-pub   rsa2048 2015-05-11 [SC]
-      D3D2DE04F43D9AA9041BED522EE1A0A50FF63062
-uid           [ultimate] bartf1969@protonmail.com <bartf1969@protonmail.com>
+    pub   rsa2048 2015-05-11 [SC]
+          D3D2DE04F43D9AA9041BED522EE1A0A50FF63062
+    uid           [ultimate] bartf1969@protonmail.com <bartf1969@protonmail.com>
 
 * This key is attached here: [keys/bartf1969protonmail.asc](/keys/bartf1969protonmail.asc).
 
