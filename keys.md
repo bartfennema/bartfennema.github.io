@@ -11,18 +11,16 @@ it to sign various other things, such as documents, code, and this blog.
 
 All my keys are signed by the following Master Signing Key:
 
-    pub   dsa1024 2006-05-23 [SCA]
-          E1C181834E797F92FE8F69C1A094788ECE0C9C0E
-    uid           [ultimate] Bart Fennema <bfennema@gmail.com>
-    sub   elg4096 2006-05-23 [E]
-    sub   rsa4096 2020-06-18 [S]
+    pub   rsa4096 2020-06-19 [SC]
+          F45C36E8349987AB95B8ED1D63B69F001C4FB07B
+    uid           [ultimate] Bart Fennema Master Key (Bart Fennema Master Key)
+    sub   rsa4096 2020-06-19 [E]
 
 This key is also attached to this repo in the [key/](/keys/) directory. You
 should verify the fingerprint of this master key using some other channel than
 just this blog.
-I use this key for signing my blogposts as well.
 
-* This key is attached here: [keys/bfennema.asc](/keys/bfennema.asc).
+* This key is attached here: [keys/BFmasterkey.asc](/keys/BFmasterkey.asc).
 
 ## Email encryption keys
 
@@ -38,15 +36,16 @@ The following is my GPG key for Protonmail:
 ## Blog signing key
 
     pub   rsa4096 2020-06-19 [SC]
-          A71FA8ADA66186105AD9986D0F8FF10B83100D44
-    uid           [ultimate] Bartblog@github.com (Blog signing key) <Bartblog@github.com>
+          3AC7982A172118C9CFA5831756723BF0DDF6A257
+    uid           [ultimate] bartblog (Key to sign blogposts)
     sub   rsa4096 2020-06-19 [E]
 
-* This key is attached here: [keys/bartbloggithub.asc](/keys/bartbloggithub.asc).
+* This key is attached here: [keys/bartblog.asc](/keys/bartblog.asc).
 
 ## Note on lack of expiration date on code-signing keys
 
-My signing keys do not have expiration dates. This is not laziness. There is a fundamental problem with using an expiration date on keys used for code signing (e.g. `git tag -s`), because it
+My signing keys do not have expiration dates. This is not laziness. 
+There is a fundamental problem with using an expiration date on keys used for code signing (e.g. `git tag -s`), because it
 is unclear what the outcome should be when one verifies some old code (written
 and signed when the key was still valid) in the future when the key has already
 expired?
