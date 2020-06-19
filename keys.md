@@ -35,6 +35,15 @@ The following is my GPG key for Protonmail:
 * This key is attached here: [keys/bartf1969protonmail.asc](/keys/bartf1969protonmail.asc).
 
 
+## Blog signing key
+
+    pub   rsa4096 2020-06-19 [SC]
+          A71FA8ADA66186105AD9986D0F8FF10B83100D44
+    uid           [ultimate] Bartblog@github.com (Blog signing key) <Bartblog@github.com>
+    sub   rsa4096 2020-06-19 [E]
+
+* This key is attached here: [keys/bartbloggithub.asc](/keys/bartbloggithub.asc).
+
 ## Note on lack of expiration date on code-signing keys
 
 My signing keys do not have expiration dates. This is not laziness. There is a fundamental problem with using an expiration date on keys used for code signing (e.g. `git tag -s`), because it
