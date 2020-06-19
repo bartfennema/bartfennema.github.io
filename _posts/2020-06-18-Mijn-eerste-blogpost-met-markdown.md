@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Mijn eerste blogpost in Markdown"
+title: "Mijn eerste blogpost met Markdown"
 author: Bart Fennema
 ---
 
