@@ -13,7 +13,7 @@ Hier hou ik me bezig met de ontwikkeling van het Informatie landschap, applicati
 Daarnaast ben ik een enthousiast deelnemer aan het CAB, de Change Advisory Board.
 Het proces om op een gecontroleerde manier wijzigingen aan je CMDB door te voeren.
 De CMDB staat voor Configuration Managament DataBase. Dit bevat een lijst met alle 'ICT-objecten' die de Provincie heeft.
-Een voorbeeld ervan is: een server, een applicatie, een beeldscherm, een database, een koppeling tussen twee applicaties, een website...een plethora.
+Een voorbeeld ervan is: een server, een applicatie, een beeldscherm, een database, een koppeling tussen twee applicaties, een website...een [plethora](https://www.youtube.com/watch?v=fQKbbFeaWJM).
 
 Ik ben sterk geinteresseerd in wat mensen bezighoudt, wat hen drijft.
 Ik denk wel eens dat ik daarin zo geinteresseerd was omdat ik daarmee altijd op 'veilige' afstand kon blijven.
