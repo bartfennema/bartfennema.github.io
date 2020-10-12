@@ -18,7 +18,7 @@ Een voorbeeld ervan is: een server, een applicatie, een beeldscherm, een databas
 Ik ben sterk geinteresseerd in wat mensen bezighoudt, wat hen drijft.
 Ik denk wel eens dat ik daarin zo geinteresseerd was omdat ik daarmee altijd op 'veilige' afstand kon blijven.
 Niet betrokken raken in lastige, complexe en soms/vaak? emotionele verwikkelingen... :-)
-Met dat ik dit schrijf schud ik die illusie van me af; zonder relatie geen relatie.
+Inmiddels heb ik dat van me afgeschud; zonder relatie geen relatie.
 
 Ander punt van interesse is encryptie en meer in het bijzonder Pretty Good Privacy.
 Denk dat ik daar al sinds..1998? mee bezig ben. Ik ben wat langzaam, dus heb nu pas het idee er een beetje van te begrijpen, haha.
@@ -34,6 +34,6 @@ En vanuit de naam van de starter zou je kunnen afleiden dat ik ook iets met yoga
 Soort van fanatiek Ashtanga beoefend, vaak mezelf voorbij gelopen. Nu een pas op de plaats om weer te leren voelen wat belangrijk is.
 
 Ook lang Zen meditatie beoefend. Daar werd ik eigenlijk te ongedurig van (en dat is alleen maar meer geworden, vrees ik), dus ik ben daarmee gestopt.
-Natuurlijk zit daar iets wat aandacht vraagt....maar, nog niet...ben er nog niet klaar voor.
+Natuurlijk zit daar iets wat aandacht vraagt....maar, later misschien.
 
  
