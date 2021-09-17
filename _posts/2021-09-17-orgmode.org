@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Orgmode"
+author: Bart Fennema (as should be obvious by now. Just typing this to see if this metadata field is used)
+---
+
+* Heading 1
+** Heading 2
+   - some list
+   - second entry
+** TODO Second heading 2, making it a todo                         :blogpost:
+   [[id:568364E5-8BD7-48FA-B6F9-84E216342370][org-roam]]
+
+Keeping it as it is now. Go publish! See what happens!
+
+     
