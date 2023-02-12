@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-02-12 Sun 10:28 -->
+<!-- 2023-02-12 Sun 13:55 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -200,29 +200,15 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgeffd334">1. C4 to the rescue</a></li>
-<li><a href="#orgbd3accb">2. There are a few challenges with that perspective:</a></li>
-<li><a href="#orgaab5abd">3. The benefits of C4</a></li>
-<li><a href="#org432841a">4. My C4 Notation Rules</a></li>
-<li><a href="#orgd061f22">5. The C4 notation in C4 notation</a></li>
-<li><a href="#orga7092cf">6. Beware with symbols and colour!</a></li>
+<li><a href="#org7e0bf85">1. C4 to the rescue</a></li>
+<li><a href="#orgdcf5e28">2. There are a few challenges with that perspective:</a></li>
+<li><a href="#org2ce0b18">3. The benefits of C4</a></li>
+<li><a href="#org455aa18">4. My C4 Notation Rules</a></li>
+<li><a href="#orgb03861f">5. The C4 notation in C4 notation</a></li>
+<li><a href="#org528b7df">6. Beware with symbols and colour!</a></li>
 </ul>
 </div>
 </div>
-<p>
-&#x2014;
-title:      "C4 modelling"
-date:       2022-11-13T17:14:55+01:00
-tags:       ["architectuur", "article", "c4", "diagramming"]
-identifier: "20221113T171455"
-&#x2014;
-</p>
-
-
-<p>
-Tags: *Article *Architectuur *Diagramming *C4 
-</p>
-
 <p>
 Artikel door Tjarda Peelen, via [LinkedIn](<a href="https://www.linkedin.com/pulse/visuals-first-self-explaining-communication-power-software-peelen/?trackingId=rfffso5NhQacjj0mL8h9wA%3D%3D">https://www.linkedin.com/pulse/visuals-first-self-explaining-communication-power-software-peelen/?trackingId=rfffso5NhQacjj0mL8h9wA%3D%3D</a>).
 C4 in Archimate: [Klik hier](<a href="https://www.archimatetool.com/blog/2020/04/18/c4-model-architecture-viewpoint-and-archi-4-7/">https://www.archimatetool.com/blog/2020/04/18/c4-model-architecture-viewpoint-and-archi-4-7/</a>)
@@ -237,8 +223,8 @@ My mantra is “Visuals First!” because if text processing occurs on one side 
 Practically none of these audiences have studied the language, tools, graphics or schema-language architects often use; like UML, ArchiMate, BPMN and such. You use these tools probably for a good reason, but chances are almost 100%, your audiences do not understand these architecture schemas. That is a problem. If your audience does not understand the architect’s schema, your message also does not get across. 
 </p>
 
-<div id="outline-container-orgeffd334" class="outline-2">
-<h2 id="orgeffd334"><span class="section-number-2">1.</span> C4 to the rescue</h2>
+<div id="outline-container-org7e0bf85" class="outline-2">
+<h2 id="org7e0bf85"><span class="section-number-2">1.</span> C4 to the rescue</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Simon Brown created the C4 model to communicate Software Architecture. 
@@ -257,8 +243,8 @@ The idea is brilliantly clean and easy, however Simon’s approach being a ‘Co
 </div>
 </div>
 
-<div id="outline-container-orgbd3accb" class="outline-2">
-<h2 id="orgbd3accb"><span class="section-number-2">2.</span> There are a few challenges with that perspective:</h2>
+<div id="outline-container-orgdcf5e28" class="outline-2">
+<h2 id="orgdcf5e28"><span class="section-number-2">2.</span> There are a few challenges with that perspective:</h2>
 <div class="outline-text-2" id="text-2">
 <ul class="org-ul">
 <li>The Component and Code level is where updates occur too frequently. It often is too much detail for the Solution Architecture purpose.</li>
@@ -269,8 +255,8 @@ The idea is brilliantly clean and easy, however Simon’s approach being a ‘Co
 </div>
 </div>
 
-<div id="outline-container-orgaab5abd" class="outline-2">
-<h2 id="orgaab5abd"><span class="section-number-2">3.</span> The benefits of C4</h2>
+<div id="outline-container-org2ce0b18" class="outline-2">
+<h2 id="org2ce0b18"><span class="section-number-2">3.</span> The benefits of C4</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 The beauty of the C4 diagrams is in the simplicity, the clarity, the  way nearly anyone can interpret the schema without the need for years of IT education. Due to the near-meaningless shapes and very meaningful description and relations the communication power can be enormous! 
@@ -292,8 +278,8 @@ sample context view of an imaginary MyEnterpriseApp platform
 </p>
 </div>
 </div>
-<div id="outline-container-org432841a" class="outline-2">
-<h2 id="org432841a"><span class="section-number-2">4.</span> My C4 Notation Rules</h2>
+<div id="outline-container-org455aa18" class="outline-2">
+<h2 id="org455aa18"><span class="section-number-2">4.</span> My C4 Notation Rules</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 The C4 notation works on whiteboards and any low-tech sketching solution, thus anyone in the project can maintain, not only those that master version control. 
@@ -301,7 +287,7 @@ On my schema, every box represents a ‘thing’, like a system, component, part
 </p>
 <ul class="org-ul">
 <li>a name (bold), the name for the ‘thing’ the organisation understands, like ‘MyE-LearningTool’, or ‘ActiveDirectory’.</li>
-<li>```A stereotype, between [] or &lt;&lt;&gt;&gt;, usually italic, containing a specific term for the ‘thing’ like [ECM system] or <a id="org1d6e004"></a>```</li>
+<li>```A stereotype, between [] or &lt;&lt;&gt;&gt;, usually italic, containing a specific term for the ‘thing’ like [ECM system] or <a id="org293f85d"></a>```</li>
 <li>A description of the responsibility of the thing, or the expectations of the person, groep or external connected system. It brings enormous value if one can define the responsibilities of the things in the IT landscape or architecture. Often I cannot, being a good indicator I don’t understand the environment enough&#x2026;</li>
 </ul>
 
@@ -310,15 +296,15 @@ Boxes are connected with directional arrows that always have a description of wh
 </p>
 
 
-<div id="orgf2a3c9a" class="figure">
+<div id="org3df9990" class="figure">
 <p><img src="img/Pasted image 20221027211841.png" alt="Pasted image 20221027211841.png" />
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgd061f22" class="outline-2">
-<h2 id="orgd061f22"><span class="section-number-2">5.</span> The C4 notation in C4 notation</h2>
+<div id="outline-container-orgb03861f" class="outline-2">
+<h2 id="orgb03861f"><span class="section-number-2">5.</span> The C4 notation in C4 notation</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 In the deployment diagram, add to the lines the protocols and port-numbers, this is the data they expect and need. In the boxes I usually add the type/version of OS, running services, if relevant CPU and memory etc.
@@ -326,8 +312,8 @@ In the deployment diagram, add to the lines the protocols and port-numbers, this
 </div>
 </div>
 
-<div id="outline-container-orga7092cf" class="outline-2">
-<h2 id="orga7092cf"><span class="section-number-2">6.</span> Beware with symbols and colour!</h2>
+<div id="outline-container-org528b7df" class="outline-2">
+<h2 id="org528b7df"><span class="section-number-2">6.</span> Beware with symbols and colour!</h2>
 <div class="outline-text-2" id="text-6">
 <ul class="org-ul">
 <li>Symbols: don’t assume your audience understands the shape of a database; use a legenda</li>
@@ -347,7 +333,7 @@ The C4 schemas defined by Simon Brown do not solve all communication challenges.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Bart Fennema</p>
-<p class="date">Created: 2023-02-12 Sun 10:28</p>
+<p class="date">Created: 2023-02-12 Sun 13:55</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
