@@ -1,5 +1,0 @@
-* Eindresultaat
-  Het lijkt nu eindelijk te werken
-** De org-file komt in drafts terecht.
-   - Die moet ik nog wel exporteren naar markdown? HTML?
-     
