@@ -1,298 +1,364 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- 2023-03-04 Sat 20:37 -->
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>&lrm;</title>
-<meta name="author" content="Bart Fennema" />
-<meta name="generator" content="Org Mode" />
-<style>
-  #content { max-width: 60em; margin: auto; }
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #e6e6e6;
-    border-radius: 3px;
-    background-color: #f2f2f2;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: auto;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    top: -8px;
-    right: 12px;
-    padding: 3px;
-    color: #555;
-    background-color: #f2f2f299;
-  }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-authinfo::before { content: 'Authinfo'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { }
-</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Bart</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
-<div id="content" class="content">
-<div id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="#orgacbddad">1. Algemene zaken</a></li>
-<li><a href="#org8622bce">2. Blog</a>
-<ul>
-<li><a href="#org2afb6cf">2.1. 2023</a>
-<ul>
-<li><a href="#orgcbf966d">2.1.1. 2023-02 February</a>
-<ul>
-<li><a href="#orgede31ac">2.1.1.1. 2023-02-12 Sunday</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-orgacbddad" class="outline-2">
-<h2 id="orgacbddad"><span class="section-number-2">1.</span> Algemene zaken</h2>
-<div class="outline-text-2" id="text-1">
-<ul class="org-ul">
-<li><a href="remember.html">remember</a></li>
-<li><a href="sitemap.html">Sitemap</a></li>
-</ul>
 
-<div id="org7a6521d" class="figure">
-<p><img src="img/PermacultureEthics.jpg" alt="PermacultureEthics.jpg" />
-</p>
-</div>
-</div>
-</div>
-<div id="outline-container-org8622bce" class="outline-2">
-<h2 id="org8622bce"><span class="section-number-2">2.</span> Blog</h2>
-<div class="outline-text-2" id="text-2">
-</div>
-<div id="outline-container-org2afb6cf" class="outline-3">
-<h3 id="org2afb6cf"><span class="section-number-3">2.1.</span> 2023</h3>
-<div class="outline-text-3" id="text-2-1">
-</div>
-<div id="outline-container-orgcbf966d" class="outline-4">
-<h4 id="orgcbf966d"><span class="section-number-4">2.1.1.</span> 2023-02 February</h4>
-<div class="outline-text-4" id="text-2-1-1">
-</div>
-<div id="outline-container-orgede31ac" class="outline-5">
-<h5 id="orgede31ac"><span class="section-number-5">2.1.1.1.</span> 2023-02-12 Sunday</h5>
-<div class="outline-text-5" id="text-2-1-1-1">
-</div>
-<ol class="org-ol">
-<li><a id="org02109fe"></a>test blogging vanuit org-capture<br />
-<div class="outline-text-6" id="text-2-1-1-1-1">
-<p>
-hij zet er een heading op&#x2026;.level 5? Weird&#x2026;.
-</p>
-</div>
-</li>
-<li><a id="orgc469195"></a>tweede test<br />
-<div class="outline-text-6" id="text-2-1-1-1-2">
-<p>
-Kan ook wel zonder Tags.
-</p>
-</div>
-</li>
-<li><a id="orgbaba503"></a>Blogging with Org-mode<br />
-<div class="outline-text-6" id="text-2-1-1-1-3">
-<p>
-<a href="https://opensource.com/article/20/3/blog-emacs">https://opensource.com/article/20/3/blog-emacs</a>
-</p>
-</div>
-</li>
-<li><a id="org56d1de5"></a>org-publish tutorial<br />
-<div class="outline-text-6" id="text-2-1-1-1-4">
-<p>
-<a href="https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html#org0d4ee9d">https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html#org0d4ee9d</a>
-</p>
-</div>
-</li>
-<li><a id="org2278958"></a>nieuwe test met datum als filename<br />
-<div class="outline-text-6" id="text-2-1-1-1-5">
-<p>
-boom!
-</p>
-</div>
-</li>
-</ol>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="postamble" class="status">
-<p class="author">Author: Bart Fennema</p>
-<p class="date">Created: 2023-03-04 Sat 20:37</p>
-<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
-</div>
+<body>
+    <header class="flex flex-row align-center mb2">
+        <img src="img/teslatower.jpg" style="flex: 1; max-width: 30px; max-height: 30px; margin-right:5px;" alt="wardenclyff tower"> <h1 class="">[ Dagboek van een father/human/lifespark/bakker ]</h1>
+    </header>
+    <main class="mt3">
+        <nav class="nav flex align-center">
+            <a href="#volkstuin">Volkstuin</a>
+            <a href="#zuurdesem">Bakken met zuurdesem</a>
+            <a href="#boekenkast">Boekenkast</a>
+            <a href="#fermenteren">Fermenteren</a>
+        </nav>
+        <section>
+            <h2 id="volkstuin" class="tc">Volkstuin</h2>
+            <div class="flex justify-evenly"><p class="tc p--noted mb1"><a href="garden.html">&rarr; Garden Overview</a></p> <p class="tc p--noted mb1"><a href="permaculture.html">&rarr; Permaculture Principles and Resources</a></p></div>
+            <section class="mt2 flex flex--wrap justify-center">
+                <div class="flex">
+                    <div class="topicBlock">
+                        <h3 class="topicBlock__header">Gardening</h3>
+                        <img src="img/garden04.jpeg" class="imgBlock" alt="pollen-covered bumblebee on conflower">
+                        <p class="p--noted">We grow a dense yet diverse number of vegetables, herbs, fruits, and flowers in a no-till organic system that we designed and built to replace the pre-existing lawn. We utilize drip irrigation, rain water catchment, and natural fertilizer sources to promote the long-term integrity of the soil and natural resources.</p>
+                        <details>
+                            <summary>More photos</summary>
+                            <ul>
+                                <li><a href="img/garden11.jpeg" target="_blank">garden_year_1</a></li>
+                                <li><a href="img/garden10.jpeg" target="_blank">garden_year_2</a></li>
+                                <li><a href="img/garden01.jpeg" target="_blank">garden_year_3</a></li>
+                                <li><a href="img/garden02.jpeg" target="_blank">tomatoes</a></li>
+                                <li><a href="img/garden03.jpeg" target="_blank">sunflower</a></li>
+                                <li><a href="img/garden05.jpeg" target="_blank">summer_harvest</a></li>
+                                <li><a href="img/garden06.jpeg" target="_blank">garlic</a></li>
+                                <li><a href="img/garden07.jpeg" target="_blank">purple_carrots</a></li>
+                                <li><a href="img/garden08.jpeg" target="_blank">buckwheat_covercrop</a></li>
+                                <li><a href="img/garden09.jpeg" target="_blank">elderberry_baby_mantis</a></li>
+                            </ul>
+                        </details>
+                    </div>
+                </div>
+                 <div class="flex">
+                    <div class="topicBlock">
+                        <h3 class="topicBlock__header">Vermicomposting</h3>
+                        <img src="img/vc04.jpeg" loading="lazy" class="imgBlock" alt="red wriggler worm on compost">
+                        <p class="p--noted">We employ Eisenia fetida (red wriggler) composting worms to turn food and garden waste into fertilizer for our gardens through vermicomposting. We have two different bin systems that we made, one of which is a 5-gallon bin that I take to events and workshops to educate folks on the importance of returning nutrients back to our soil.</p>
+                        <details>
+                            <summary>More photos</summary>
+                            <ul>
+                                <li><a href="img/vc01.jpeg" target="_blank">worm_bin</a></li>
+                                <li><a href="img/vc02.jpeg" target="_blank">side_view</a></li>
+                                <li><a href="img/vc03.jpeg" target="_blank">inside</a></li>
+                                <li><a href="img/vc06.jpeg" target="_blank">eisenia_fetida</a></li>
+                                <li><a href="img/vc07.jpeg" target="_blank">worm_cocoon</a></li>
+                                <li><a href="img/vc05.jpeg" target="_blank">education</a></li>
+                            </ul>
+                        </details>
+                        <button class="ml1 mt1 mb1">🌱 <a href="handbook/gardening/vermicomposting.html">Learn Vermicomposting</a></button>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="topicBlock">
+                        <h3 class="topicBlock__header">Aerobic Composting</h3>
+                        <img src="img/compost01.jpeg" loading="lazy" class="imgBlock" alt="compost decomposing in bin">
+                        <p class="p--noted">Our two-bin system was built out of recycled, heat-treated wooden pallets and accommodates our limited space. We primarily use wood chips for our carbon material or dried leaves as available. This bin manages overflow waste that is too large or unsuitable for the worm bins.</p>
+                        <button class="ml1 mt1 mb1">🌱 <a href="handbook/gardening/composting.html">Learn Composting</a></button>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="topicBlock">
+                        <h3 class="topicBlock__header">Microgreens</h3>
+                        <img src="img/mg04.jpeg" loading="lazy" class="imgBlock" alt="container of microgreens with label">
+                        <p class="p--noted">We grow an on-going supply of microgreens for ourselves and others during the winter. We grow indoors under full-spectrum LED grow lights and experiment with different seed mixes. We harvest an average of 3 pounds of microgreens every 10-14 days.</p>
+                        <details>
+                            <summary>More photos</summary>
+                            <ul>
+                                <li><a href="img/mg02.jpeg" target="_blank">mild_mix</a></li>
+                                <li><a href="img/mg05.jpeg" target="_blank">bulls_blood</a></li>
+                                <li><a href="img/mg01.jpeg" target="_blank">grow_rack</a></li>
+                                <li><a href="img/mg03.jpeg" target="_blank">packaged</a></li>
+                            </ul>
+                        </details>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="topicBlock">
+                        <h3 class="topicBlock__header">Coturnix Quail</h3>
+                        <img src="img/cq01.jpeg" loading="lazy" class="imgBlock" alt="partially constructed outdoor aviary">
+                        <p class="p--noted">-*- COMING SOON -*- <br>We will be raising our flock on the ground in a contained area that provides a naturally enriching environment. They'll be able to forage, nest, and explore freely while protected from feral cats, wandering pets, racoons, opossums, and other curious predators. This winter we'll finish the roof, build feeders, and prep for their Spring arrival.</p>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="topicBlock">
+                        <h3 class="topicBlock__header">Seed Starting</h3>
+                        <img src="img/starts01.jpeg" loading="lazy" class="imgBlock" alt="young tomato plants in trays">
+                        <p class="p--noted">Starting plants from seed is one of my favorite parts of gardening. On just one modest sized metal shelf I start around 650 plants; all of our vegetables, herbs, and annual flowers for the season. Sometimes I start plants for other growers or donate starts to fundraisers. We use heat mats for germination and LED full spectrum grow lights for the first 4-6 weeks until plants are ready to move outdoors for hardening off.</p>
+                        <details>
+                            <summary>More photos</summary>
+                            <ul>
+                                <li><a href="img/starts02.jpeg" target="_blank">fall_starts</a></li>
+                                <li><a href="img/starts03.jpeg" target="_blank">growing_rack</a></li>
+                            </ul>
+                        </details>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="topicBlock">
+                        <h3 class="topicBlock__header">Chickens</h3>
+                        <img src="img/chickens.jpeg" loading="lazy" class="imgBlock" alt="brown hens walking in grass">
+                        <p class="p--noted">We spent several years in a 1790s farmhouse where our love for homesteading began. Here we raised a small free-range flock of hens for homegrown eggs and manure for our compost.</p>
+                        <details>
+                            <summary>More photos</summary>
+                            <ul>
+                                <li><a href="img/chickens02.jpeg" target="_blank">dust_bathing</a></li>
+                                <li><a href="img/chickens03.jpeg" target="_blank">um_hello</a></li>
+                                <li><a href="img/chickens04.jpeg" target="_blank">good_morning</a></li>
+                            </ul>
+                        </details>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <h2 id="zuurdesem" class="tc">Bakken met zuurdesem</h2>
+            <p class="tc p--noted mb1"><a href="2021-farming-report.html" target="_blank">&rarr; 2021 Farming Report</a></p>
+            <section class="mt2 flex flex--wrap justify-center">
+                <div class="flex">
+                    <div class="topicBlock">
+                        <h3 class="topicBlock__header">2021 Intensive</h3>
+                        <img src="img/farm02.jpeg" loading="lazy" class="imgBlock" alt="large group of vegetable beds in rural setting">
+                        <p class="p--noted">After studying a great deal about soil health, regenerative agriculture, and small farming we decided to take one full year to put it to practice and see just how possible it is to make a living at. On both leased farm land and our urban lot we grew over 2,000 lbs of food which we washed, packed, and distributed.</p>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="topicBlock">
+                        <h3 class="topicBlock__header">Soil Building</h3>
+                        <img src="img/farm03.jpeg" loading="lazy" class="imgBlock" alt="pale soil with compost on some of the beds">
+                        <p class="p--noted">A large part of what interests me in small farming is the opportunities it lends to improving and building soil through the act of intentional farming. This image depicts the lethargic color of the soil at the start. We built up the health of the soil with mushroom compost, mycorrhizal inoculant, and lactic acid bacteria. In 2022 it was still rich with organic matter.</p>
+                        <details>
+                            <summary>More photos</summary>
+                            <ul>
+                                <li><a href="img/farm04.jpeg" target="_blank">soil_2022</a></li>
+                            </ul>
+                        </details>
+                    </div>
+                </div>
+                 <div class="flex">
+                    <div class="topicBlock">
+                        <h3 class="topicBlock__header">CSA</h3>
+                        <img src="img/farm05.jpeg" loading="lazy" class="imgBlock" alt="huge beets lined up on counter top in kitchen">
+                        <p class="p--noted">We sold our produce through a CSA where we provided a weekly bag of mixed vegetables and herbs to ten different families. While this was a great way to predict sales, we ended up having far more produce than interested people. We donated much of the excess to a local shelter. </p>
+                    </div>
+                </div>
+            </section>
+
+            <h2 id="boekenkast" class="tc">Boekenkast</h2>
+            <section class="flex flex--wrap justify-center">
+                <div class="flex">
+                    <div class="topicBlock">
+                        <h3 class="topicBlock__header">Lactic Acid Bacteria</h3>
+                        <img src="img/lab02.jpeg" loading="lazy" class="imgBlock" alt="jar of LAB">
+                        <p class="p--noted">Lactic Acid Bacteria (LAB) in the garden improves nutrient uptake, plant health, disease resistance, and soil tilth. It is easy and extremely low cost to make. The final product is diluted (1:1000) and applied directly to the soil or plant stoma, either as a drench or foliar spray. I use it in combination with FPJ and WCA.</p>
+                        <details>
+                            <summary>More photos</summary>
+                            <ul>
+                                <li><a href="img/lab02.jpeg" target="_blank">finished_LAB</a></li>
+                            </ul>
+                        </details>
+                        <button class="ml1 mt1 mb1">🌱 <a href="handbook/knf/lactic-acid-bacteria.html">Learn to make LAB</a></button>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="topicBlock">
+                        <h3 class="topicBlock__header">Fermented Plant Juice</h3>
+                        <img src="img/fpj02.jpeg" loading="lazy" class="imgBlock" alt="jar of fermenting plants">
+                        <p class="p--noted">Fermented Plant Juice (FPJ) is a process that extracts plant nutrients through fermentation. Massaging equal parts plant matter and brown sugar together kick starts a frenzy of naturally occuring bacteria to ferment the material into a dark juice that is then diluted (1:500) and applied to the roots or leaves of the plants. </p>
+                        <details>
+                            <summary>More photos</summary>
+                            <ul>
+                                <li><a href="img/fpj03.jpeg" target="_blank">stinging_nettle</a></li>
+                                <li><a href="img/fpj.jpeg" target="_blank">fermenting_FPJ</a></li>
+                                <li><a href="img/fpj04.jpeg" target="_blank">finished_FPJ</a></li>
+                            </ul>
+                        </details>
+                        <button class="ml1 mt1 mb1">🌱 <a href="handbook/knf/fermented-plant-juice.html">Learn to make FPJ</a></button>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="topicBlock">
+                        <h3 class="topicBlock__header">Water Soluble Calcium</h3>
+                        <img src="img/wca.jpeg" loading="lazy" class="imgBlock" alt="jar of calcium extract">
+                        <p class="p--noted">Water Soluble Calcium (WCA) is the simple process of using vinegar to extract the calcium out of eggshells for use in the garden. The finished product is diluted (1:1000) and applied as a foliar spray during the reproductive phase of the plants growing cycle.</p>
+                        <button class="ml1 mt1 mb1">🌱 <a href="handbook/knf/water-soluble-calcium.html">Learn to make WCA</a></button>
+                    </div>
+                </div>
+            </section>
+
+            <h2 id="fermenteren" class="tc">Fermenteren</h2>
+            <section class="flex flex--wrap justify-center mb2">
+                <div class="flex">
+                    <div class="topicBlock">
+                        <h3 class="topicBlock__header">Seed Saving</h3>
+                        <img src="img/seeds.jpeg" loading="lazy" class="imgBlock" alt="cantaloupe seed on paper plate">
+                        <p class="p--noted">We save seeds from any remarkable fruits we harvest - looking for the best flavors from the healthiest most productive plants. In early autumn I collect seed heads from flowers in our garden and elsewhere. I save a lot for us, share with friends, and donate to free seed banks.</p>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="topicBlock">
+                        <h3 class="topicBlock__header">Produce Preservation</h3>
+                        <img src="img/preserves12.jpeg" loading="lazy" class="imgBlock" alt="three baskets overflowing with sweet peppers">
+                        <p class="p--noted">Saving our homegrown foods for winter is a primary focus for me during the summer. I can, blanch, freeze, ferment, cook & freeze, and dehydrate depending on what it is I'm trying to save. Making and freezing soups is one of my favorite ways of preserving the incredible flavor of homegrown food.</p>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="topicBlock">
+                        <h3 class="topicBlock__header">Tomato Preservation</h3>
+                        <img src="img/preserves09.jpeg" loading="lazy" class="imgBlock" alt="jars of stewed tomatoes">
+                        <p class="p--noted">Every season there's plenty of tomatoes to preserve. I mostly prefer to cook them into a soup or sauce to freeze, but I also like stewed canned tomatoes and "sundried" dehydrated. I freeze cherry tomatoes whole which are easy to throw onto a winter pizza for a sweet and fruity reminder of summer.</p>
+                        <details>
+                            <summary>More photos</summary>
+                            <ul>
+                                <li><a href="img/preserves02.jpeg" target="_blank">dehydrated</a></li>
+                                <li><a href="img/preserves01.jpeg" target="_blank">canned_stewed</a></li>
+                                <li><a href="img/preserves10.jpeg" target="_blank">canned_salsa</a></li>
+                            </ul>
+                        </details>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="topicBlock">
+                        <h3 class="topicBlock__header">Sourdough Starter</h3>
+                        <img src="img/preserves03.jpeg" loading="lazy" class="imgBlock" alt="closeup of bubbling sourdough starter">
+                        <p class="p--noted">My first Sourdough starter I started with rye and built up with a local stoneground flour. Some day soon I want to try a gluten-free version with Sorghum flour.</p>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="topicBlock">
+                        <h3 class="topicBlock__header">Yogurt</h3>
+                        <img src="img/preserves04.jpeg" loading="lazy" class="imgBlock" alt="jars of homemade yogurt">
+                        <p class="p--noted">We make our yogurt with organic whole milk and an organic yogurt starter. I've made both raw milk and pasteurized yogurt and personally prefer the texture and flavor of the pasteurized. It's easy and economical, and we prefer the flavor to most store-bought yogurts.</p>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="topicBlock">
+                        <h3 class="topicBlock__header">Bone Broth</h3>
+                        <img src="img/preserves14.jpeg" loading="lazy" class="imgBlock" alt="hens in a sunny pasture">
+                        <p class="p--noted">I make a slow-cooker bone broth that fuels us through winter and works as a base for the many soups I prep during the summer. I make it following the slow cooking of a whole chicken that we get through friend's small farm CSA. After being a devout vegetarian for 18 years these thoughtful and caring farmers mean a great deal to me and my health.</p>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="topicBlock">
+                        <h3 class="topicBlock__header">Lacto-fermentation</h3>
+                        <img src="img/preserves06.jpeg" loading="lazy" class="imgBlock" alt="two jars of lacto-ferments">
+                        <p class="p--noted">We use lacto-fermentation as another way to preserve and enjoy the food we grow. And like everyone else who ferments we enjoy the added health benefits we get from it.</p>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="topicBlock">
+                        <h3 class="topicBlock__header">Fruit Jam</h3>
+                        <img src="img/preserves11.jpeg" loading="lazy" class="imgBlock" alt="hand holding jar of blueberry jam">
+                        <p class="p--noted">If you need a reason to plant a fruit tree, homemade jam is it. Fig, white peach, and blueberry jams are some of our favorite local fruits to preserve. Nothing beats it on homemade yogurt or cast-iron cornbread.</p>
+                        <details>
+                            <summary>More photos</summary>
+                            <ul>
+                                <li><a href="img/preserves07.jpeg" target="_blank">blueberry_jam</a></li>
+                            </ul>
+                        </details>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="topicBlock">
+                        <h3 class="topicBlock__header">Fruit Vinegar</h3>
+                        <img src="img/vinegar.jpeg" loading="lazy" class="imgBlock" alt="two glass bottles of peach vinegar">
+                        <p class="p--noted">Any overripened fruits we end up with we turn into vinegar for later culinary use. It's an easy process that just requires time more than anything.</p>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="topicBlock">
+                        <h3 class="topicBlock__header">Medicinals</h3>
+                        <img src="img/medicinals02.jpeg" loading="lazy" class="imgBlock" alt="collection of tinctures and syrups" style="width: 250px; cover: fit-cover;">
+                        <p class="p--noted">I like to dry herbs and spices, make tinctures, syrups, infusions, and teas from plants and materials we grow or source locally. We regularly keep dried culinary herbs, CBD tincture, and Elderberry syrup on hand. </p>
+                        <details>
+                            <summary>More photos</summary>
+                            <ul>
+                                <li><a href="img/medicinals.jpeg" target="_blank">tinctures_syrups</a></li>
+                            </ul>
+                        </details>
+                    </div>
+                </div> 
+                <div class="flex">
+                    <div class="topicBlock">
+                        <h3 class="topicBlock__header">Elderberry Syrup</h3>
+                        <img src="img/elderberry01.jpeg" loading="lazy" class="imgBlock" alt="jar of labeled elderberry syrup">
+                        <p class="p--noted">We have three young Elderberry trees (Sambucus canadensis) on our property that are just starting to produce flowers. In the meantime we harvest from a friend's garden and make our syrup with raw honey and various herbs depending on our needs and the season. The trees provide a great habitat and food source for birds and insects.</p>
+                        <details>
+                            <summary>More photos</summary>
+                            <ul>
+                                <li><a href="img/garden09.jpeg" target="_blank">elderberry_baby_mantis</a></li>
+                            </ul>
+                        </details>
+                    </div>
+                </div>  
+                <div class="flex">
+                    <div class="topicBlock">
+                        <h3 class="topicBlock__header">Ghee</h3>
+                        <img src="img/ghee.jpeg" loading="lazy" class="imgBlock" alt="pint jar of yellow ghee">
+                        <p class="p--noted">Ghee is my preferred cooking oil of choice but I like to make rather than buy it. It's much more economic and I like being able to infuse it with CBD or other herbs. In Ayurveda its a Yogavahi, an agent that carries the medicinal properties of herbs into the dhatus (tissues) of the body.</p>
+                    </div>
+                </div> 
+                <div class="flex">
+                    <div class="topicBlock">
+                        <h3 class="topicBlock__header">Pesto</h3>
+                        <img src="img/pesto.jpeg" loading="lazy" class="imgBlock" alt="pint jar of fresh pesto" loading="lazy">
+                        <p class="p--noted">Basil pesto is our winter staple. We make dozens of batches that we freeze into "pucks" using a muffin tin and store in ziplock bags. The ingredients are just fresh basil, walnuts (more economic than pinenuts), EVOO, and salt to taste.</p>
+                        <details>
+                            <summary>More photos</summary>
+                            <ul>
+                                <li><a href="img/pesto02.jpeg" target="_blank">basil</a></li>
+                                <li><a href="img/pesto03.jpeg" target="_blank">processor</a></li>
+                            </ul>
+                        </details>
+                    </div>
+                </div>        
+                <div class="flex">
+                    <div class="topicBlock">
+                        <h3 class="topicBlock__header">Raw Honey Infusions</h3>
+                        <img src="img/honey01.jpeg" loading="lazy" class="imgBlock" alt="small jar of honey with dried goldenrod" loading="lazy">
+                        <p class="p--noted">By infusing herbs from our garden in raw honey we are able to preserve the medicinal qualities of the herbs for future use. Using raw honey further adds to the medicinal quality of this preservation method. I mostly use this as a tea, but it can be used in any way you'd normally use honey as well.</p>
+                    </div>
+                </div>        
+            </section>
+            <hr class="mt3">
+            <section class="mb2">
+                <h2>About</h2>
+                <img src="img/tickfoot.jpeg" alt="woman standing next to massive sunflower" class="img--regular">
+                <p>Like most people with a chronic collection of dirt under their nails I have an affinity for the natural world - plants and animals, both wild and domesticated and spend a great deal of time invested in both. Together with my <a href="https://winduptoy.sensorstation.co" target="_blank">husband</a> we maintain a small polyculture garden in the mountains of Virginia; raising vegetables, fruits, herbs, flowers, quail, and plenty of beauty and joy. We grow in collaboration with other ecologically-minded small growers in our area because I very much believe that it is diverse, collaborative small food systems that will lead to a bright and resilient future.</p>
+
+                <p>I spend a great deal of time invested in homegrown abundance, finding more joy in creating than buying; making everything from garden amendments to preserved foods and household goods. Outside of the garden I do quite a bit of volunteer service related to horticulture education and food sovereignty. You can follow me at <a href="https://merveilles.town/web/@tickfoot" target="_blank" rel="me">@tickfoot@merveilles.town</a></p>
+
+                
+            </section>
+        </section>
+    </main>
+<footer>
+    <div>
+        <a href="https://merveilles.town/web/@tickfoot" target="_blank"><img src="img/merveilles.svg" alt="merveilles logo"></a>
+        <a href="https://www.plantvirginianatives.org/"><img src="img/natives.svg" alt="plant natives"></a>
+        <a href="https://vmga.net"><img src="img/mg.svg" alt="master gardener"></a>
+        <a href="https://www.4thesoil.org/"><img src="img/soil.svg" alt="i am 4 the soil"></a>
+        <img src="img/worms.svg" alt="I've got worms">
+    </div>
+    <div>
+        <p class="p--noted">Low consumption website &#8226; No trackers<br>Tickfoot © 2022 | Transmitting from the Appalachian Mountains of Virginia</p>
+    </div>
+</footer>
+
 </body>
-</html>
+</html> 
