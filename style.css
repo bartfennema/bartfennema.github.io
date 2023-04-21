@@ -1,10 +1,29 @@
+html {
+background:
+  linear-gradient(to bottom,
+    limegreen,
+    transparent
+  ),
+  linear-gradient(
+    90deg,
+    skyblue,
+    transparent
+  ),
+  linear-gradient(
+    -90deg,
+    coral,
+    transparent
+  );
+  
+background-blend-mode: screen;
+}
+
 body {
 	max-width: 1000px;
 	margin: auto;
 	padding-top: 15px;
 	padding-right: 8px;
 	padding-left: 8px;
-	background-image: linear-gradient(to bottom, #faebd7, #FFF);
 	color: #212121;
 }
 
