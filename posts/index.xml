@@ -15,5 +15,12 @@
       <guid>https://wardenclyffe.mieterseboel.nl/posts/20231229t110508--blogpost-test__blog_test/</guid>
       <description>Hier is een nieuwe post!&#xA;Het is een org file met subheadings en meer mooie dingen! Tja een tweede subheading met niks eronder…. Hoofd heading Hier komt een mooie tabel&#xA;kol1 kol2 eerste- tweede- bla bliep Hupse Kee derde hoofdheading Mastodon</description>
     </item>
+    <item>
+      <title>Ask HN How did you learn to draw diagrams</title>
+      <link>https://wardenclyffe.mieterseboel.nl/posts/20221123t104544--ask-hn-how-did-you-learn-to-draw-diagrams__architectuur_article_c4_diagramming/</link>
+      <pubDate>Wed, 23 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://wardenclyffe.mieterseboel.nl/posts/20221123t104544--ask-hn-how-did-you-learn-to-draw-diagrams__architectuur_article_c4_diagramming/</guid>
+      <description>links naar relevante notities:: C4-modelling.html&#xA;[Ask HN: How did you learn to draw diagrams?](https://news.ycombinator.com/item?id=33357937)&#xA;By [Ambolia](https://news.ycombinator.com/user?id=Ambolia)&#xA;I find myself getting into more situations where I have to convey the structure of a project, or the workflow of a functionality, or a general idea for a UI, and I have very limited skills at what I can produce. I can usually get by with simple diagrams and meetings to clarify the rest, but it would be nice to produce more expressive diagrams to convey more complex ideas.</description>
+    </item>
   </channel>
 </rss>
