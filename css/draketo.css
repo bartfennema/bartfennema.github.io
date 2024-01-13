@@ -1,0 +1,911 @@
+/* TODO: Header in HTML einbinden, mit Klickbaren Links. Vielleicht html-preamble. */
+
+
+/* org-mode inline default-style */
+#content { max-width: 60em; margin: auto; }
+.title  { text-align: center;
+           margin-bottom: .2em; }
+.subtitle { text-align: center;
+            font-size: medium;
+            font-weight: bold;
+            margin-top:0; }
+.todo   { font-family: monospace; color: red; }
+.done   { font-family: monospace; color: green; }
+.priority { font-family: monospace; color: orange; }
+.tag    { background-color: #eee; font-family: monospace;
+          padding: 2px; font-size: 80%; font-weight: normal; }
+.timestamp { color: #666; font-weight: normal; }
+.timestamp-kwd { color: #5f9ea0; }
+.org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+.org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+.org-center { margin-left: auto; margin-right: auto; text-align: center; }
+.underline { text-decoration: underline; }
+#postamble p, #preamble p { font-size: 90%; margin: .2em; }
+p.verse { margin-left: 3%; }
+pre {
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  background-color: floralwhite;
+  padding: 8pt;
+  font-family: monospace;
+  overflow: auto;
+  margin: 1.2em;
+}
+pre.src {
+  position: relative;
+  overflow: auto;
+}
+pre.src:before {
+  display: none;
+  position: absolute;
+  top: -8px;
+  right: 12px;
+  padding: 3px;
+  color: #555;
+  background-color: #f2f2f299;
+}
+pre.src:hover:before { display: inline; margin-top: 14px;}
+/* Languages per Org manual */
+pre.src-asymptote:before { content: 'Asymptote'; }
+pre.src-awk:before { content: 'Awk'; }
+pre.src-authinfo::before { content: 'Authinfo'; }
+pre.src-C:before { content: 'C'; }
+/* pre.src-C++ doesn't work in CSS */
+pre.src-clojure:before { content: 'Clojure'; }
+pre.src-css:before { content: 'CSS'; }
+pre.src-D:before { content: 'D'; }
+pre.src-ditaa:before { content: 'ditaa'; }
+pre.src-dot:before { content: 'Graphviz'; }
+pre.src-calc:before { content: 'Emacs Calc'; }
+pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+pre.src-fortran:before { content: 'Fortran'; }
+pre.src-gnuplot:before { content: 'gnuplot'; }
+pre.src-haskell:before { content: 'Haskell'; }
+pre.src-hledger:before { content: 'hledger'; }
+pre.src-java:before { content: 'Java'; }
+pre.src-js:before { content: 'Javascript'; }
+pre.src-latex:before { content: 'LaTeX'; }
+pre.src-ledger:before { content: 'Ledger'; }
+pre.src-lisp:before { content: 'Lisp'; }
+pre.src-lilypond:before { content: 'Lilypond'; }
+pre.src-lua:before { content: 'Lua'; }
+pre.src-matlab:before { content: 'MATLAB'; }
+pre.src-mscgen:before { content: 'Mscgen'; }
+pre.src-ocaml:before { content: 'Objective Caml'; }
+pre.src-octave:before { content: 'Octave'; }
+pre.src-org:before { content: 'Org mode'; }
+pre.src-oz:before { content: 'OZ'; }
+pre.src-plantuml:before { content: 'Plantuml'; }
+pre.src-processing:before { content: 'Processing.js'; }
+pre.src-python:before { content: 'Python'; }
+pre.src-R:before { content: 'R'; }
+pre.src-ruby:before { content: 'Ruby'; }
+pre.src-sass:before { content: 'Sass'; }
+pre.src-scheme:before { content: 'Scheme'; }
+pre.src-screen:before { content: 'Gnu Screen'; }
+pre.src-sed:before { content: 'Sed'; }
+pre.src-sh:before { content: 'shell'; }
+pre.src-sql:before { content: 'SQL'; }
+pre.src-sqlite:before { content: 'SQLite'; }
+/* additional languages in org.el's org-babel-load-languages alist */
+pre.src-forth:before { content: 'Forth'; }
+pre.src-io:before { content: 'IO'; }
+pre.src-J:before { content: 'J'; }
+pre.src-makefile:before { content: 'Makefile'; }
+pre.src-maxima:before { content: 'Maxima'; }
+pre.src-perl:before { content: 'Perl'; }
+pre.src-picolisp:before { content: 'Pico Lisp'; }
+pre.src-scala:before { content: 'Scala'; }
+pre.src-shell:before { content: 'Shell Script'; }
+pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+/* additional language identifiers per "defun org-babel-execute"
+     in ob-*.el */
+pre.src-cpp:before  { content: 'C++'; }
+pre.src-abc:before  { content: 'ABC'; }
+pre.src-coq:before  { content: 'Coq'; }
+pre.src-groovy:before  { content: 'Groovy'; }
+/* additional language identifiers from org-babel-shell-names in
+   ob-shell.el: ob-shell is the only babel language using a lambda to put
+   the execution function name together. */
+pre.src-bash:before  { content: 'bash'; }
+pre.src-csh:before  { content: 'csh'; }
+pre.src-ash:before  { content: 'ash'; }
+pre.src-dash:before  { content: 'dash'; }
+pre.src-ksh:before  { content: 'ksh'; }
+pre.src-mksh:before  { content: 'mksh'; }
+pre.src-posh:before  { content: 'posh'; }
+/* Additional Emacs modes also supported by the LaTeX listings package */
+pre.src-ada:before { content: 'Ada'; }
+pre.src-asm:before { content: 'Assembler'; }
+pre.src-caml:before { content: 'Caml'; }
+pre.src-delphi:before { content: 'Delphi'; }
+pre.src-html:before { content: 'HTML'; }
+pre.src-idl:before { content: 'IDL'; }
+pre.src-mercury:before { content: 'Mercury'; }
+pre.src-metapost:before { content: 'MetaPost'; }
+pre.src-modula-2:before { content: 'Modula-2'; }
+pre.src-pascal:before { content: 'Pascal'; }
+pre.src-ps:before { content: 'PostScript'; }
+pre.src-prolog:before { content: 'Prolog'; }
+pre.src-simula:before { content: 'Simula'; }
+pre.src-tcl:before { content: 'tcl'; }
+pre.src-tex:before { content: 'TeX'; }
+pre.src-plain-tex:before { content: 'Plain TeX'; }
+pre.src-verilog:before { content: 'Verilog'; }
+pre.src-vhdl:before { content: 'VHDL'; }
+pre.src-xml:before { content: 'XML'; }
+pre.src-nxml:before { content: 'XML'; }
+/* add a generic configuration mode; LaTeX export needs an additional
+   (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+pre.src-conf:before { content: 'Configuration File'; }
+
+table { border-collapse:collapse; }
+caption.t-above { caption-side: top; }
+caption.t-bottom { caption-side: bottom; }
+td, th { vertical-align:top;  }
+th.org-right  { text-align: center;  }
+th.org-left   { text-align: center;   }
+th.org-center { text-align: center; }
+td.org-right  { text-align: right;  }
+td.org-left   { text-align: left;   }
+td.org-center { text-align: center; }
+dt { font-weight: bold; }
+.footpara { display: inline; }
+.footdef  { margin-bottom: 1em; }
+.figure { padding: 1em; }
+.figure p { text-align: center; }
+.equation-container {
+  display: table;
+  text-align: center;
+  width: 100%;
+}
+.equation {
+  vertical-align: middle;
+}
+.equation-label {
+  display: table-cell;
+  text-align: right;
+  vertical-align: middle;
+}
+.inlinetask {
+  padding: 10px;
+  border: 2px solid gray;
+  margin: 10px;
+  background: #ffffcc;
+}
+#org-div-home-and-up
+ { text-align: right; font-size: 70%; white-space: nowrap; }
+textarea { overflow-x: auto; }
+.linenr { font-size: smaller }
+.code-highlighted { background-color: #ffff00; }
+.org-info-js_info-navigation { border-style: none; }
+#org-info-js_console-label
+  { font-size: 10px; font-weight: bold; white-space: nowrap; }
+.org-info-js_search-highlight
+  { background-color: #ffff00; color: #000000; font-weight: bold; }
+.org-svg { }
+
+
+/* Generic  */
+
+/* avoid jumping with scroll-bars */
+html {
+    overflow-x: hidden;
+}
+
+#head {
+    width: 100%;
+}
+
+#preamble {
+    position: absolute;
+    height: 80px;
+}
+#content, #preamble {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content {
+    background-color: #ffffff;
+    border-radius: 7px;
+    padding-bottom: 0.31em;
+    margin-bottom: 1.61803em;
+    box-shadow: 0px 5px 10px gray;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 -6px 20px 0 rgba(0, 0, 0, 0.19);*/
+    /* background-color: #fffbf8; */
+}
+
+#content:after {
+  content: "To read on, see the links at the top. To take a break, just close this page.";
+  position: absolute;
+  margin-top: 0.5em;
+  margin-left: 1.2em;
+  margin-right: 1.2em;
+  max-width: 700px; /* fallback */
+  max-width: calc(740px - 2.4em);
+  color: #a0522d; /* sienna */
+}
+
+#content h1 {
+    padding-top: 0.618em;
+    padding-bottom: 0.18em;
+}
+
+body {
+    /*background-color: #fffbf8;*/
+    background-color: #f5ebe1;
+}
+
+
+.category-tab:first-letter {
+    font-weight: bold;
+    color: black;
+    opacity: 1.0;
+    z-index: 0;
+}
+.category-tab {
+    display: inline-block;
+    font-size: 12pt;
+    width: 11.5%;
+    padding-bottom: 3px;
+    padding-left: 1%;
+    padding-right: 1%;
+    background-repeat: no-repeat;
+    text-align: center;
+    text-decoration: none;
+    color: #f5ebe1;
+    opacity: 0.7;
+}
+.category-tab:first-letter:hover {
+    font-weight: bold;
+    color: black;
+    opacity: 1.0;
+}
+.category-tab:hover {
+    color: black;
+    opacity: 1.0;
+    z-index: 2;
+    text-decoration: underline;
+    text-shadow: 0 0 3px #ffffff;
+    background-color: #ffffff;
+    box-shadow: 0px -5px 7px -2px gray;
+    /* text-shadow: 0 0 3px #fffbf8; */
+    /* background-color: #fffbf8; */
+}
+
+.tab-photo {
+    width: 17%;
+    background-position: center bottom;
+    padding-bottom: 3px;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    z-index: 2;
+    color: transparent;
+    opacity: 1.0;
+}
+.tab-photo:hover {
+    color: gray;
+    /*background-image: url(portrait.png); *//* url(RRE_3779b-kopf-schultern-transparent-svg-90x98-glatt.png); */
+}
+/* background-image definitions are inlined in the org-templates and index.org to parallelize loading of the images with this CSS file. */
+.tab-rollenspiel {
+    float: right;
+}
+.category-tab:nth-child(1) {
+    border-top-left-radius: 7px;
+}
+.category-tab:nth-child(7) {
+    border-top-right-radius: 7px;
+}
+.tab-inactive {
+    /*background-color: #f5ebe1;*/
+}
+#nav-list {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 0pt;
+}
+
+
+/* types of content from my old site */
+.verweise { 
+    width: 24%; padding: 3px; float:right; margin-left:10px; margin-bottom: 3px; border-style: none none none dashed; border-width: 0px 0px 0px thin; text-align: left; 
+}
+
+.sourcebox {
+    float: right;
+    text-align: right;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    max-width: 30%;
+}
+
+.sourcebox img {
+    max-width: 100%;
+}
+
+
+/* CSS adapted from Dennis Ogbe: https://ogbe.net/blog/blogging_with_org.html */
+body {
+    color: #511;
+    line-height:1.333;
+    font-size:14pt;
+    font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "PT Serif", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", "Georgia", serif;
+    text-rendering:optimizeLegibility;
+    margin: 0 auto;
+}
+h1,h2,h3 {
+    color:#944;
+    font-weight:600;
+    text-decoration:none;
+}
+h1 {
+    font-size:200%;
+    margin-bottom:.5em;
+    line-height:1.1;
+}
+h2 {
+    font-size:116%;
+    margin-top:.5em;
+    line-height:1.2;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    background-color: #f5ebe1;
+    border-bottom: solid thin;
+}
+h3 {
+    font-size:105%;
+    line-height:1.26;
+    margin-top:.5em;
+    border-bottom: dashed thin;
+}
+h1 a,h2 a,h3 a {
+    color:#944;
+    text-decoration:none;
+}
+b,strong {
+    font-weight:700;
+    color:#944;
+}
+#content {
+    font-size: 12pt;
+}
+li,p,dd,blockquote {
+    text-align:justify;
+    -moz-hyphens:auto;
+    -webkit-hyphens:auto;
+    hyphens:auto;
+    padding-right: 0.3em;
+}
+p,dd,blockquote {
+    padding-left: 0.3em;
+}
+ol ol {
+    list-style-type:lower-latin;
+}
+blockquote {
+    margin:1.2em 1.5em;
+}
+dt {
+  font-weight:400;
+  padding-left: 0.2em;
+}
+pre {
+    overflow:auto;
+    color:#944;
+    background-color:floralwhite; /* previously #f5ebe1, but that was hard to read with colorized source-code. */ 
+    font-size:10pt;
+    border-color:#944;
+    border-style:solid;
+    border-width:1px;
+    padding:.5em;
+    min-width: min-content;
+}
+pre,code {
+    font-family:Inconsolata, "Deja Vu Sans Mono", monospace;
+    white-space:pre;
+}
+img,table {
+    max-width:80%;
+    margin:1.5em auto;
+}
+.figure {
+    margin:1.5em auto;
+}
+.figure p {
+    text-align:center;
+    font-size:80%;
+    line-height:1.286;
+}
+.figure img,.figure svg {
+    margin-bottom:.5em;
+}
+iframe {
+    height:600px;
+    width:100%;
+    border:1px solid #944;
+}
+#mypicture {
+    padding-left:25px;
+    padding-bottom:25px;
+}
+#footnotes {
+    margin-top:4.5em;
+}
+#footnotes p {
+    font-size:80%;
+    line-height:1.142;
+}
+.footdef sup {
+    float:left;
+    margin: 1em;
+}
+.drawer {
+    background-color:#4a858c;
+    color:#944;
+    margin: 1em 0;
+    padding:20px;
+}
+.drawer h6 {
+    color:#bd745e;
+    font-size:14pt;
+    font-weight:700;
+    margin:0 0 1em;
+}
+.drawer :last-child {
+    margin-bottom:0;
+}
+.drawer.warning {
+    background-color:#a52a2a;
+}
+.drawer.warning h6 {
+    color:#a52a2a;
+}
+#postamble {
+    margin-top:2.5em;
+}
+#postamble p {
+    font-size:75%;
+    text-align:right;
+}
+path {
+    stroke:#000;
+    stroke-width:2;
+    fill:none;
+}
+svg {
+    display:block;
+    margin:1.5em auto;
+}
+svg button {
+    position:absolute;
+    right:0;
+    bottom:0;
+}
+svg .plot {
+    display:none;
+    margin:1em;
+}
+svg .plot thead {
+    font-size:110%;
+    color:#888a85;
+}
+svg .plot em {
+    font-variant:small-caps;
+    font-style:normal;
+}
+svg .plot th {
+    padding-right:1em;
+    font-style:italic;
+}
+a, a:hover, #banner nav a:hover, #banner nav a:active, #banner nav .active a:link, #banner nav .active a:visited {
+    color:#944; /* same as strong, diff is underlining */
+}
+
+
+
+
+/* Tiny size: smaller than 400px */
+
+#preamble {
+    width: 100%;
+    top: 0px;
+}
+
+#content, #preamble {
+    min-width: 6em;
+}
+
+#content {
+    margin-top: 15px;
+}
+
+/* less padding left for lists on tiny screens */
+#content ul {
+    padding-left: 20px;
+}
+
+.category-tab {
+    height: 19px;
+    padding-top: 20px;
+}
+.tab-photo {
+    background-size: 30px;
+    /* background-size: 90px 98px; */
+    padding-bottom: 0.7px;
+    height: 18px;
+}
+.tab-wissen {
+    background-size: 26px;
+    background-position: center 10px;
+    height: 22px;
+}
+.tab-software {
+    background-size: 37px;
+    background-position: center 10px;
+}
+.tab-politik {
+    background-size: 25px;
+    background-position: center 10px;
+}
+.tab-anderes {
+    background-size: 20px;
+    background-position: center 10px;
+}
+.tab-kreatives {
+    background-size: 26px;
+    background-position: center 10px;
+}
+.tab-rollenspiel {
+    background-size: 32px;
+    background-position: center 5px;
+    float: right;
+    height: 22px;
+}
+
+#org-div-home-and-up {
+    visibility: hidden;
+}
+
+.newsbox {
+  float: right;
+  width: 38%;
+  margin-left: 0.3em;
+  padding-left: 0.1em;
+  padding-top: 0.1em;
+  outline-width: thin;
+  outline-style: dashed;
+  background-color: #ffffff;
+}
+.newsbox p {margin-top: 0px;}
+
+
+/* keep the tab text visible for platforms without hover */
+@media (hover: none) {
+.category-tab {
+    color: black;
+    width: 11.2%;
+    font-size: 8pt;
+    opacity: 1.0;
+    z-index: 2;
+    text-decoration: underline;
+    text-shadow: 0 0 3px #ffffff;
+    /* text-shadow: 0 0 3px #fffbf8; */
+}
+.tab-photo {
+    color: transparent;
+    font-size: 8pt;
+}
+.tab-rollenspiel {
+    width: 18%;
+}
+}
+
+
+/* tiny tabs in vertical */
+
+@media only screen and (hover: none) and (max-width: 380px) {
+  .category-tab {
+    writing-mode: vertical-lr;
+  }
+}
+
+/* optimize code containers for tiny screens. */
+
+@media only screen and (max-width: 440px) {
+  .org-src-container pre, pre.example {
+    font-size: xx-small;
+  }
+}
+
+/* optimize figures for tiny screens. */
+
+@media only screen and (max-width: 480px) {
+  figure {
+    margin: 0;
+  }
+}
+
+/* Mobile size: smaller than or equal to 768 px, min size 480 px (smartphones) */
+
+
+@media only screen and (min-width: 480px) {
+
+#preamble {
+    width: 100%;
+    top: 0px;
+}
+
+#content, #preamble {
+    min-width: 20em;
+}
+
+#content {
+    margin-top: 45px;
+}
+
+.category-tab {
+    height: 19px;
+    color: #f5ebe1;
+    padding-top: 40px;
+}
+.tab-photo {
+    background-size: 40px;
+    /* background-size: 90px 98px; */
+    padding-bottom: 6px;
+    height: 16px;
+}
+.tab-wissen {
+    background-size: 52%;
+    background-position: center 10px;
+    height: 22px;
+}
+.tab-software {
+    background-size: 68%;
+    background-position: center 10px;
+}
+.tab-politik {
+    background-size: 45%;
+    background-position: center 10px;
+}
+.tab-anderes {
+    background-size: 40%;
+    background-position: center 10px;
+}
+.tab-kreatives {
+    background-size: 52%;
+    background-position: center 10px;
+}
+.tab-rollenspiel {
+    background-size: 55%;
+    background-position: center 5px;
+    float: right;
+    height: 22px;
+    padding-top: 42px;
+}
+
+#org-div-home-and-up {
+    visibility: hidden;
+}
+
+/* undo no-hover visibility adjustments for tiny screens */
+@media (hover: none) {
+.category-tab {
+    color: black;
+    width: 11.5%;
+    font-size: 11pt;
+}
+.tab-photo {
+    width: 10%;
+    font-size: 12pt;
+    color: transparent;
+}
+.tab-rollenspiel {
+    width: 18%;
+}
+}
+}
+
+/* optimize code containers for tiny screens. */
+
+
+@media only screen and (max-width: 540px) {
+  .org-src-container pre, pre.example {
+    font-size: smaller;
+    overflow-x: auto;
+    min-width: unset;
+    margin: 0em;
+  }
+}
+
+
+/* small size:  larger than 768 px (small devices, tablets) */
+
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+/* avoid jumping with scroll-bars */
+html {
+    width: 100vw;
+}
+
+
+#preamble {
+    position: absolute;
+    height: 80px;
+    top: 15px;
+}
+#content, #preamble {
+    width: 740px; /* smaller than the screen minus the scrollbar */
+}
+#content {
+    margin-top: 104px;
+}
+
+#content p {
+    padding-left: 1.236em;
+    padding-right: 1.236em;
+}
+#content ul {
+    padding-left: 40px;
+}
+
+#content li {
+    padding-right: 1.236em;
+}
+#content h1, #content h2, #content h3, #content h4, #content h5, #content h6 {
+    padding-left: 0.2em;
+}
+
+#org-div-home-and-up {
+    visibility: visible;
+    margin-right: 15px;
+}
+
+.category-tab:first-letter {
+    font-weight: bold;
+    color: black;
+    opacity: 1.0;
+}
+.category-tab:hover {
+    color: black;
+    opacity: 1.0;
+}
+
+.category-tab {
+    height: 25px;
+    color: gray;
+    padding-top: 80px;
+}
+.tab-photo {
+    background-size: 60px 77px;
+    height: 21px;
+    padding-bottom: 5px;
+    text-indent: -17px; /* centers the text on the tab */
+    /* background-size: 90px 98px; */
+}
+.tab-wissen {
+    background-size: 80px 70px;
+    background-position: center 10px;
+    height: 25px;
+}
+.tab-software {
+    background-size: 100px 61px;
+    background-position: center 22px;
+}
+.tab-politik {
+    background-size: 85px 70px;
+    background-position: center 10px;
+}
+.tab-anderes {
+    background-size: 70px 70px;
+    background-position: center 10px;
+}
+.tab-kreatives {
+    background-size: 96px 70px;
+    background-position: center 10px;
+}
+.tab-rollenspiel {
+    background-size: 88px 80px;
+    background-position: center 0px;
+    float: right;
+    height: 25px;
+}
+
+@media print {
+    body {
+        font-size:9pt;
+        max-width:none;
+        color: #000;
+        width:auto;
+        column-count:2;
+        -moz-column-count:2;
+        -webkit-column-count:2;
+        widows:3;
+        margin:0;
+    }
+    #content {
+        background-color: #ffffff;
+        box-shadow: 0px 0px 0px white;
+    }
+    h1, h2, h3 {
+        color: #000
+    }
+    pre {
+        font-size:8pt;
+        margin:6pt 0;
+        padding:0 6pt;
+    }
+    p,li,dd,blockquote {
+        margin:6pt 0;
+    }
+    h1,#table-of-contents {
+        column-span:all;
+        -webkit-column-span:2;
+    }
+    .drawer {
+        border:1pt solid #585858;
+        padding:3pt;
+    }
+    .drawer h6,.drawer p {
+        color:#000;
+        font-size:9pt;
+        display:inline;
+    }
+    a {
+        text-decoration:none;
+        color:#000;
+    }
+    #MathJax_Message,#taglist,svg button {
+        display:none;
+    }
+}
+
+} /* end @media only screen and (min-width: 768px) { */
+
+/* medium size:  larger than 992 px (medium devices) */
+
+/* large size:  larger than 1200px (large devices) */
+
+/* increase font size for large screens */
+@media only screen and (min-width: 1200px) {
+#content {
+    font-size: 16pt;
+}
+#content pre {
+  font-size: 12pt;
+}
+/* has slightly less space for images, I do not yet understand why. */
+img,table {
+    max-width:77%;
+}
+}
+
+#content ul.org-ul li {
+  margin-top: 0.32em;
+}
+
+#content ul.org-ul {
+  margin-bottom: 1.5em;
+}
+
+/* full-width boxed text */
+.kasten, .aufzeichnung-inside {
+    color: #111;
+    text-align: justify;
+    clear: both;
+    border-top: 1px solid gray !important;
+    border-right: 0px none gray !important;
+    border-left: 0px none gray !important;
+    border-bottom: 1px solid gray !important;
+    background-color: #f6efca;
+    border-top: thin solid gray;
+    border-bottom: thin solid gray;
+    float: left;
+    width: 100%;
+    z-index: 1;
+    margin-top:20px;
+    margin-bottom:20px;
+}
