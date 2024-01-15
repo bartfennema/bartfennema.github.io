@@ -9,18 +9,18 @@
      xmlns:georss="http://www.georss.org/georss"
      xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
      xmlns:media="http://search.yahoo.com/mrss/"><channel>
-  <title>Sitemap for project org-notes</title>
+  <title>New blogposts on Wardenclyffe.mieterseboel.nl</title>
   <atom:link href="https://wardenclyffe.mieterseboel.nl/feed.xml" rel="self" type="application/rss+xml" />
   <link>https://wardenclyffe.mieterseboel.nl/</link>
   <description><![CDATA[]]></description>
   <language>en</language>
-  <pubDate>Mon, 15 Jan 2024 13:59:24 +0100</pubDate>
-  <lastBuildDate>Mon, 15 Jan 2024 13:59:24 +0100</lastBuildDate>
+  <pubDate>Mon, 15 Jan 2024 14:02:14 +0100</pubDate>
+  <lastBuildDate>Mon, 15 Jan 2024 14:02:14 +0100</lastBuildDate>
   <generator>Emacs 29.1 Org-mode 9.6.6</generator>
   <webMaster>fenneb@22W48Y2 (nil)</webMaster>
   <image>
     <url>img/rss.jpg</url>
-    <title>Sitemap for project org-notes</title>
+    <title>New blogposts on Wardenclyffe.mieterseboel.nl</title>
     <link>https://wardenclyffe.mieterseboel.nl/</link>
   </image>
 
