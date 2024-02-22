@@ -1,5 +1,6 @@
 html {
-background:
+
+/*    background:
   linear-gradient(
     limegreen,
     transparent
@@ -13,9 +14,10 @@ background:
     -90deg,
     coral,
     transparent
-  );
+  );*/
   
-background-blend-mode: screen;
+/*    background-blend-mode: screen;*/
+    background-color: #F6F5F1;
 }
 
 body {
